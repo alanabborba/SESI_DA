@@ -1,3 +1,4 @@
+
 body{
     display: flex;
     margin: 0px;
@@ -78,6 +79,7 @@ body{
     text-transform: uppercase;
     cursor: pointer;
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 .entrar-btn:hover{
@@ -85,6 +87,8 @@ body{
     color: black;
     border: 1px solid black;
 }
+
+
 
 
 
