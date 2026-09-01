@@ -34,3 +34,6 @@ casas.forEach(casa => {
         mensagem.textContent = "Vez do jogador " + jogador;
     };
 });
+function reiniciarJogo() {
+    location.reload();
+}

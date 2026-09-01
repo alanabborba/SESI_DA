@@ -22,3 +22,21 @@ body {
 .casa:hover {
     background-color: #eee;
 }
+#reiniciar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#reiniciar:hover {
+    background-color: #555;
+}
+#titulo {
+    font-size: 50px;
+}
