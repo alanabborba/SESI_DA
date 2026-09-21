@@ -1,27 +1,34 @@
-// true == X
-// false == O
+
+
+
+//true == X
+//false == O
 var ordem_jogada = true;
-
-function jogar(num_btn) {
-
-    // Busca o botão que está sendo clicado
+var total_jogadas = 0;
+var total_de_vitorias_O;
+var total_de_vitorias_X;
+  
+function jogar(num_btn){
+    //busque o botao que esta sendo clicado
     const botao = document.getElementById(num_btn);
-
-    // Adiciona "X" ou "O" no botão
-    if (ordem_jogada === true) {
+    //adicione "X" ou "O" no botao que foi clicado
+    if (ordem_jogada === true){
         botao.innerHTML = "O";
-    } else {
+        // ordem_jogada = false;
+    }else{
         botao.innerHTML = "X";
+        // ordem_jogada = true; 
     }
 
     validarGanhador();
+    
 
-    // Troca o jogador
     ordem_jogada = !ordem_jogada;
 }
 
-function validarGanhador() {
+function validarGanhador(){
 
+    document.getElementById("total_jog").innerHTML;
     const btn1_vlr = document.getElementById("1").innerHTML;
     const btn2_vlr = document.getElementById("2").innerHTML;
     const btn3_vlr = document.getElementById("3").innerHTML;
@@ -32,63 +39,120 @@ function validarGanhador() {
     const btn8_vlr = document.getElementById("8").innerHTML;
     const btn9_vlr = document.getElementById("9").innerHTML;
 
-    if (
-        btn1_vlr === btn2_vlr &&
-        btn1_vlr === btn3_vlr &&
-        btn1_vlr !== ""
-    ) {
-        alert("O ganhador foi " + btn1_vlr);
-
-    } else if (
-        btn4_vlr === btn5_vlr &&
-        btn4_vlr === btn6_vlr &&
-        btn4_vlr !== ""
-    ) {
-        alert("O ganhador foi " + btn4_vlr);
-
-    } else if (
-        btn7_vlr === btn8_vlr &&
-        btn7_vlr === btn9_vlr &&
-        btn7_vlr !== ""
-    ) {
-        alert("O ganhador foi " + btn7_vlr);
-
-    } else if (
-        btn1_vlr === btn4_vlr &&
-        btn1_vlr === btn7_vlr &&
-        btn1_vlr !== ""
-    ) {
-        alert("O ganhador foi " + btn1_vlr);
-
-    } else if (
-        btn2_vlr === btn5_vlr &&
-        btn2_vlr === btn8_vlr &&
-        btn2_vlr !== ""
-    ) {
-        alert("O ganhador foi " + btn2_vlr);
-
-    } else if (
-        btn3_vlr === btn6_vlr &&
-        btn3_vlr === btn9_vlr &&
-        btn3_vlr !== ""
-    ) {
-        alert("O ganhador foi " + btn3_vlr);
-
-    } else if (
-        btn1_vlr === btn5_vlr &&
-        btn1_vlr === btn9_vlr &&
-        btn1_vlr !== ""
-    ) {
-        alert("O ganhador foi " + btn1_vlr);
-
-    } else if (
-        btn3_vlr === btn5_vlr &&
-        btn3_vlr === btn7_vlr &&
-        btn3_vlr !== ""
-    ) {
-        alert("O ganhador foi " + btn3_vlr);
+    if ((btn1_vlr == btn2_vlr)
+        && (btn1_vlr == btn3_vlr)
+        && (btn1_vlr !== "")
+        && (btn2_vlr !== "")
+        && (btn3_vlr !== "")) {
+        alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
+        LimparJogo();
+        contabilizarganhadores();
+       
+    } else if ((btn4_vlr == btn5_vlr)
+        && (btn4_vlr == btn6_vlr)
+        && (btn4_vlr !== "")
+        && (btn5_vlr !== "")
+        && (btn6_vlr !== "")) {
+        alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
+        LimparJogo();
+        contabilizarganhadores();
+    
+    } else if ((btn7_vlr == btn8_vlr)
+        && (btn7_vlr == btn9_vlr)
+        && (btn7_vlr !== "")
+        && (btn8_vlr !== "")
+        && (btn9_vlr !== "")) {
+        alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
+        LimparJogo();
+        contabilizarganhadores();
+       
+    } else if ((btn1_vlr == btn4_vlr)
+        && (btn4_vlr == btn7_vlr)
+        && (btn1_vlr !== "")
+        && (btn4_vlr !== "")
+        && (btn7_vlr !== "")) {
+        alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
+        LimparJogo();
+        contabilizarganhadores();
+    
+    } else if ((btn2_vlr == btn5_vlr)
+        && (btn2_vlr == btn8_vlr)
+        && (btn2_vlr !== "")
+        && (btn5_vlr !== "")
+        && (btn8_vlr !== "")) {
+        alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
+        LimparJogo();
+        contabilizarganhadores();
+    
+    } else if ((btn3_vlr == btn6_vlr)
+        && (btn3_vlr == btn9_vlr)
+        && (btn3_vlr !== "")
+        && (btn6_vlr !== "")
+        && (btn9_vlr !== "")) {
+        alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
+        LimparJogo();
+        contabilizarganhadores();
+    
+    } else if ((btn1_vlr == btn5_vlr)
+        && (btn1_vlr == btn9_vlr)
+        && (btn1_vlr !== "")
+        && (btn5_vlr !== "")
+        && (btn9_vlr !== "")) {
+        alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
+        LimparJogo();
+        contabilizarganhadores();
+    
+    } else if ((btn3_vlr == btn5_vlr)
+        && (btn3_vlr == btn7_vlr)
+        && (btn3_vlr !== "")
+        && (btn5_vlr !== "")
+        && (btn7_vlr !== "")) {
+        alert("O ganhador foi " + (ordem_jogada ? "O" : "X"));
+        LimparJogo();
+        contabilizarganhadores();
+    
+    } else if(btn1_vlr !== ""
+        && btn2_vlr !== ""
+        && btn3_vlr !== ""
+        && btn4_vlr !== ""
+        && btn5_vlr !== ""
+        && btn6_vlr !== ""
+        && btn7_vlr !== ""
+        && btn8_vlr !== ""
+        && btn9_vlr !== ""
+    ){alert("Empate!");
+        LimparJogo();
+        contabilizarganhadores();
+    
     }
+}
+
+function LimparJogo(){
+    document.getElementById("1").innerHTML = "";
+    document.getElementById("2").innerHTML = "";
+    document.getElementById("3").innerHTML = "";
+    document.getElementById("4").innerHTML = "";
+    document.getElementById("5").innerHTML = "";
+    document.getElementById("6").innerHTML = "";
+    document.getElementById("7").innerHTML = "";
+    document.getElementById("8").innerHTML = "";
+    document.getElementById("9").innerHTML = "";
 }
 
 
 
+function contabilizarganhadores(){
+    total_jogadas++;
+
+    if(ordem_jogada == true){
+       total_de_vitorias_O++;
+    }else{
+        total_de_vitorias_X++;
+    }
+
+  
+
+    document.getElementById("total_jogadas").innerHTML = "Total de jogadas: " + total_jogadas;
+    document.getElementById(total_O).innerHTML = "total de vitorias O: " + total_de_vitorias_O;
+    document.getElementById(total_X).innerHTML = "total de vitorias O: " + total_de_vitorias_X;
+}
