@@ -1,0 +1,42 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    color: #333;
+}
+
+#tabuleiro {
+    width: 400px;
+    margin: auto;
+}
+
+.carta {
+    width: 90px;
+    height: 90px;
+    background-color: #333;
+    color: white;
+    margin: 5px;
+    display: inline-block;
+    font-size: 40px;
+    line-height: 90px;
+    cursor: pointer;
+}
+
+.carta.aberta {
+    background-color: white;
+    color: black;
+}
+
+.carta.acertou {
+    background-color: lightgreen;
+    color: black;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
