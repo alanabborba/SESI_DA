@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,33 @@
 </head>
 
 <body>
+    <h1>TELA DE LOGIN</h1>
     
-    
-    <label for="usuario">Usuário</label>
+
+    <label for="usuario">USUÁRIO</label>
     <input id="usuario" type="text">
 
-    <label for="senha">Senha</label>
-    <input id="senha" type="password">
+    <br><br>
 
-    <button onclick="login()">Login</button>
+    <label for="senha">SENHA</label>
+    <input id="senha" type="password">
+    <button onclick="login()">LOGIN</button>
+
+    <br><br>
+
+    <button onclick="window.location.href='cadastro.html'">
+        Cadastro
+    </button>
+
+    <button onclick="window.location.href='recup_senha'">
+        Esqueci Senha
+    </button>
 
     <script src="./script.js"></script>
-    <br>
-    <a href="./home.html">home</a><br>
-    <a href="./cadastro.html">cadastro</a><br>
-    <a href="./recuperar_senha.html">recuperar senha</a><br>
 
-    
+    <br><br>
+
+
 </body>
 
 </html>
